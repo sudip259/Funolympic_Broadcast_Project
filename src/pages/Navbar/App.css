@@ -1,0 +1,86 @@
+.menuBar {
+  overflow: hidden;
+  /* background-color: white; */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 69%;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 10px;
+  height: 130px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+}
+.inside-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menuBar .non-active {
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-bottom: 3px solid transparent;
+}
+.menuBar .active {
+  padding: 5px 0px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.barsMenu {
+  display: none;
+}
+
+.browseHeader {
+  /* background: #f2f2f2; */
+  margin: 15px auto;
+  width: 69%;
+}
+.view {
+  width: 69%;
+  margin: 0px auto;
+  background: rgb(239, 239, 239);
+  /* padding-top: 2px; */
+  border: 1px solid gray;
+}
+
+@media (max-width: 1294px) {
+  .browseHeader {
+    width: 80%;
+  }
+  .view {
+    width: 80%;
+  }
+
+  .menuBar {
+    width: 80%;
+  }
+  .menuBar .non-active {
+    display: none;
+  }
+  .barsMenu {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 472px) {
+  .menuBar {
+    width: 90%;
+  }
+  .browseHeader {
+    width: 90%;
+  }
+  .view {
+    width: 90%;
+  }
+}
