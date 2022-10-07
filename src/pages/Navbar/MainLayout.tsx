@@ -12,7 +12,9 @@ function MainLayout() {
   return (
     <>
       <React.Fragment />
-      <Navbar />
+      <ProtectedRoute>
+        <Navbar />
+      </ProtectedRoute>
       <Routes>
         <Route
           index

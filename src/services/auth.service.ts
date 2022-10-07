@@ -1,5 +1,8 @@
+import axios from "axios";
 import api from "./api";
 import TokenService from "./token.service";
+
+const baseURL = "http://127.0.0.1:8000/api";
 
 // function to request to register user api and return response
 const register = (username: String, email: String, password: String) => {
@@ -11,7 +14,7 @@ const register = (username: String, email: String, password: String) => {
 };
 // function to request to login user api and return response
 const login = async (email: any, password: any) => {
-  const response = await api.post(`/log_in/`, {
+  const response = await axios.post(`${baseURL}/log_in/`, {
     email,
     password,
   });
