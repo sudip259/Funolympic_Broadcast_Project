@@ -4,22 +4,22 @@ from .models import OlympicUser
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserCreationForm  
 
-admin.site.register(OlympicUser)
+# admin.site.register(OlympicUser)
 
-# class UserAdmin(BaseUserAdmin):
-#     add_form =  UserCreationForm
+class UserAdmin(BaseUserAdmin):
+    add_form =  UserCreationForm
 
-#     list_display = ('username', 'email')
+    list_display = ('username', 'email')
 
-#     fieldsets = (
-#         (None, {'fields': ('username', 'email','password')}),
-#     )
+    fieldsets = (
+        (None, {'fields': ('username', 'email','password','is_verified','is_active')}),
+    )
 
-#     search_fields =  ('username', 'email')
-#     ordering = ('username','email')
+    search_fields =  ('username', 'email')
+    ordering = ('username','email')
 
-#     filter_horizontal = ()
+    filter_horizontal = ()
 
-# admin.site.register(OlympicUser, UserAdmin)
-# admin.site.unregister(Group)
-# admin.site.site_url = None
+admin.site.register(OlympicUser, UserAdmin)
+admin.site.unregister(Group)
+admin.site.site_url = None
