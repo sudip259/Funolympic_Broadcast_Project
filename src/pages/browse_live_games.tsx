@@ -87,7 +87,7 @@ const BrowseLiveGames = () => {
                     >
                       {item?.team1_score}-{item?.team2_score}
                     </div>
-                    <div style={{ color: "gray" }}>{item?.game_title} </div>
+                    <div style={{ color: "gray" }}>{item?.game_title}</div>
                   </div>
                   <div>
                     <img

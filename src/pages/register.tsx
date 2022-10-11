@@ -29,9 +29,12 @@ const RegistrationForm = () => {
     AuthService.register(values.username, values.email, values.password)
       .then((res: Object) => {
         form.resetFields();
-        message.success(
-          "User Successfully Registered, Please Verify Your Account From Email"
-        );
+        setTimeout(() => {
+          message.success(
+            "User Successfully Registered, Please Verify Your Account From Email"
+          );
+        }, 1000);
+
         setLoading(false);
         navigate("/login");
       })
