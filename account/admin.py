@@ -12,7 +12,7 @@ class UserAdmin(BaseUserAdmin):
     list_display = ('username', 'email')
 
     fieldsets = (
-        (None, {'fields': ('username', 'email','password','is_verified','is_active')}),
+        (None, {'fields': ('username', 'email','password','is_verified','is_active','is_staff')}),
     )
 
     search_fields =  ('username', 'email')
