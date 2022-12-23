@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 import datetime
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account',
     'funolympic',
+    'wishlist',
     'rest_framework',
     'requests',
     'rest_framework_simplejwt',

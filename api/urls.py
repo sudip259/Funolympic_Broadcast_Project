@@ -28,5 +28,6 @@ urlpatterns = [
     path('admin_password_reset/', PasswordResetView.as_view(), name='admin_password_reset'),
     path('', include('account.urls')),
     path('', include('funolympic.urls')),
+    path('', include('wishlist.urls')),
     
 ]
